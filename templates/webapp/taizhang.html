@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1/themes/default/easyui.css">
+
+</head>
+<body>
+    <table id="dg"></table>
+
+
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-easyui-1/jquery.easyui.min.js"></script>
+<script>
+    $(function () {
+        $('#dg').datagrid({
+            data: [
+                {'code': 'value11', 'name': 'value12', 'price': 122},
+                {'code': 'value31', 'name': 'value22', 'price': 342},
+            ],
+            columns: [[
+                {field: 'number', title: '箱号', width: 100},
+                {field: 'type', title: '箱型', width: 100},
+                {field: 'price', title: 'Price', width: 100, align: 'right'}
+            ]]
+        });
+    })
+</script>
+</body>
+</html>

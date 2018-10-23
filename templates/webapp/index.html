@@ -1,13 +1,131 @@
 <!DOCTYPE html>
-{% load staticfiles %} {# 加载静态路径  #}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>"双双"的箱管系统</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="icon" href="/static/image/tab_logo.ico">
+    <title>箱管系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1/themes/default/easyui.css">
+    <style>
+        .banner_background {
+            background: url("/static/image/banner.jpg");
+        }
+
+        .navbar {
+            background: transparent;
+        }
+
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.36);
+        }
+
+        .box_item {
+            cursor: pointer;
+            float: left;
+            width: 207px;
+            height: 280px;
+            box-shadow: 0 0 30px rgba(0, 32, 62, .1);
+            border-radius: 5px;
+            padding: 20px 20px 40px 20px;
+            background: #ffffff;
+            transition: all 0.5s;
+        }
+
+        .box_item:hover {
+            background: #e0e0e0;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-<h1>箱管系统</h1>
-<strong>{{ message }}</strong>
-<img src="{% static 'image/clock.png'%}">
+<div class="banner_background">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="/static/image/tmt_logo.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="background: transparent; height: 400px">
+        <div class="container">
+            <h1>箱管系统</h1>
+            <p>目前使用excel维护台账数据，操作繁琐、易错，故开发web app，优化excel操作、
+                提高便携性、易用性</p>
+{#            <p><a class="btn btn-primary btn-lg" href="#" role="button">learn more &raquo;</a></p>#}
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top: -100px">
+    <div class="row">
+        <div class="col-xs-3">
+            <a class="box_item" href="{% url 'taizhang' %}">
+                <h2>台账管理</h2>
+                <p>
+                </p>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a class="box_item">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                </p>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a class="box_item">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                </p>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a class="box_item">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                </p>
+            </a>
+        </div>
+    </div>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-easyui-1/jquery.easyui.min.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

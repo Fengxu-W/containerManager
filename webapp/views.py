@@ -7,5 +7,9 @@ from django.http import HttpResponse
 
 # Create your views here
 def index(request):
-    context = {'message': 'i '}
+    context = {'message': 'i'}
     return render(request, 'webapp/index.html', context)
+
+
+def taizhang(request):
+    return render(request, 'webapp/taizhang.html')
